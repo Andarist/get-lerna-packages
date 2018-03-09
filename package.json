@@ -1,0 +1,37 @@
+{
+  "name": "get-lerna-packages",
+  "version": "0.1.0",
+  "description": "Get list of directories managed by lerna",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:warn": "echo \"Error: no test specified\"",
+    "precommit": "lint-staged",
+    "prerelease": "npm run test:warn",
+    "release:patch": "npm run prerelease && npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm run prerelease && npm version minor && npm publish && git push --follow-tags",
+    "release:major": "npm run prerelease && npm version major && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andarist/get-lerna-packages.git"
+  },
+  "keywords": [
+    "lerna",
+    "monorepo"
+  ],
+  "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andarist/get-lerna-packages/issues"
+  },
+  "homepage": "https://github.com/Andarist/get-lerna-packages#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  },
+  "dependencies": {
+    "glob": "^7.1.2"
+  }
+}
