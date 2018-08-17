@@ -1,6 +1,6 @@
 {
   "name": "get-lerna-packages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get list of directories managed by lerna",
   "main": "lib",
   "scripts": {
